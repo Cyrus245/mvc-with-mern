@@ -9,7 +9,7 @@
   </head>
   <body>
     <form action="/" method="post">
-      <input type="text" name="name" />
+      <input type="text" name="name" required />
       <input type="text" name="age" />
       <button type="submit">submit</button>
     </form>
@@ -18,6 +18,8 @@
       <tr>
         <th>Name</th>
         <th>Age</th>
+        <th>Update</th>
+        <th>Delete</th>
       </tr>
       <%result.map(x=>{%> <%let name=x.name%>
       <tr>

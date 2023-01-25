@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose
-  .connect("mongodb://localhost:27017/generationDB")
+  .connect("mongodb://localhost:27017/mernDB")
   .then((res) => {
     console.log("server connected sucessfully");
   })
