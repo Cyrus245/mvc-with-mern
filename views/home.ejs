@@ -9,8 +9,10 @@
   </head>
   <body>
     <form action="/" method="post">
-      <input type="text" name="name" required />
-      <input type="text" name="age" />
+      <input type="text" name="name" required placeholder="name" />
+      <input type="text" name="age" placeholder="age" />
+      <label for="birthday">Birthday:</label>
+      <input type="date" name="dob" required />
       <button type="submit">submit</button>
     </form>
 
@@ -18,13 +20,16 @@
       <tr>
         <th>Name</th>
         <th>Age</th>
-        <th>Update</th>
-        <th>Delete</th>
+        <th>DOB</th>
+        <th>operations</th>
       </tr>
-      <%result.map(x=>{%> <%let name=x.name%>
+      <%result.map(x=>{%> <%let name=x.name%> <%let date = x.dob%> <%let
+      dob=date.toString().slice(4,15)%>
+
       <tr>
         <td><%=name%></td>
         <td><%=x.age%></td>
+        <td><%=dob%></td>
         <td><a href="/update/<%=x.id%>">Update</a></td>
         <td><a href="/<%=x.id%>">Delete</a></td>
       </tr>

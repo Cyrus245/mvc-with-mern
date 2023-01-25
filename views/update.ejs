@@ -7,12 +7,16 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="/update/<%=id%>" method="post">
+    <a href="/">back</a>
+    <%result.map((x)=>{%>
+    <form action="/update/<%=x.id%>" method="post">
       <label for="name">Name</label>
-      <input type="text" name="name" required />
+      <input type="text" name="name" value="<%=x.name%>" />
       <label for="age">Age</label>
-      <input type="text" name="age" />
+      <input type="text" name="age" value="<%=x.age%>" />
+      <input type="date" name="dob" value="<%=x.dob%>" />
       <button type="submit" name="button">update</button>
     </form>
+    <%})%>
   </body>
 </html>

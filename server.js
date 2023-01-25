@@ -10,6 +10,7 @@ const app = express();
 const dotenv = require("dotenv").config();
 const router = require("./routes/routes");
 const bodyParser = require("body-parser");
+
 const { PORT } = process.env;
 
 app.use(bodyParser.urlencoded({ extended: true }));
